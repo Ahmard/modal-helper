@@ -25,5 +25,9 @@
     "bugs": {
         "url": "https://github.com/ahmard/modal-helper/issues"
     },
-    "homepage": "https://github.com/ahmard/modal-helper#readme"
+    "homepage": "https://github.com/ahmard/modal-helper#readme",
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
+    }
 }
