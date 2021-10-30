@@ -1,0 +1,29 @@
+{
+    "dependencies": {
+        "jquery": "^3.6.0"
+    },
+    "name": "@ahmard/modal-helper",
+    "version": "0.0.1",
+    "description": "Bootstrap 5 modal UI helper",
+    "main": "helper.js",
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ahmard/modal-helper.git"
+    },
+    "keywords": [
+        "modal",
+        "bootstrap modal",
+        "bootstrap 5 modal",
+        "modal helper",
+    ],
+    "author": "Ahmard",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ahmard/modal-helper/issues"
+    },
+    "homepage": "https://github.com/ahmard/modal-helper#readme"
+}
