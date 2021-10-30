@@ -45,7 +45,7 @@ module.exports = (function () {
 
         this.getHeaderElement = function () {
             if (!$headerElement) {
-                return $headerElement = jQuery(modalId).find('.modal-header');
+                return $headerElement = _$modal.find('.modal-header');
             }
 
             return $headerElement;
@@ -53,7 +53,7 @@ module.exports = (function () {
 
         this.getBodyElement = function () {
             if (!$bodyElement) {
-                return $bodyElement = jQuery(modalId).find('.modal-body');
+                return $bodyElement = _$modal.find('.modal-body');
             }
 
             return $bodyElement;
@@ -61,7 +61,7 @@ module.exports = (function () {
 
         this.getFooterElement = function () {
             if (!$footerElement) {
-                return $footerElement = jQuery(modalId).find('.modal-footer');
+                return $footerElement = _$modal.find('.modal-footer');
             }
 
             return $footerElement;
@@ -69,7 +69,7 @@ module.exports = (function () {
 
         this.getDialogElement = function () {
             if (!$dialogElement) {
-                return $dialogElement = jQuery(modalId).find('.modal-dialog');
+                return $dialogElement = _$modal.find('.modal-dialog');
             }
 
             return $dialogElement;
