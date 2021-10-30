@@ -1,4 +1,4 @@
-const ModalHelper = (function () {
+module.exports = (function () {
     function ModalHelperEvent(_$modal) {
         this.on = (type, listener) => _$modal.on(type, listener);
         this.once = (type, listener) => _$modal.once(type, listener);
@@ -176,12 +176,7 @@ const ModalHelper = (function () {
         };
     }
 
-    ModalHelper.create = (modalId) => new ModalHelper(modalId);
+    ModalHelper.create = (modal) => new ModalHelper(modal);
 
     return ModalHelper;
 })();
-
-let modal;
-jQuery(function () {
-    modal = ModalHelper.create('#modal_general');
-})
