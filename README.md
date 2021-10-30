@@ -1,7 +1,12 @@
 # Modal Helper
 
-Bootstrap 5 modal helper
+[Bootstrap](https://getbootstrap.com) 5 javascript modal helper.
 
+# Requirements
+This library requires
+[Bootstrap](https://getbootstrap.com) and
+[jQuery](https://jquery.com) to work
+.
 # Installation
 
 ```
@@ -11,7 +16,7 @@ npm install @ahmard/modal-helper
 ## Basic Usage
 
 ```js
-const modal = ModalHelper.create($('#modal'));
+const modal = ModalHelper.create(jQuery('#modal'));
 
 modal.setTitle('Login')
     .setBody('<b>Login Form</b>')
@@ -27,7 +32,7 @@ When setting the size of modal, the following values are expected: **small**, **
 or you can provide **sm**, **lg** & **xl** of course
 
 ```js
-const modal = ModalHelper.create($('#modal'));
+const modal = ModalHelper.create(jQuery('#modal'));
 
 modal.setTitle('Login');
 modal.setBody('<b>Login Form</b>');
@@ -43,7 +48,7 @@ When providing modal fullscreen value, the following values are expected: **smal
 or provide **sm**, **md**, **lg**, **xl** & **xxl**
 
 ```js
-const modal = ModalHelper.create($('#modal'));
+const modal = ModalHelper.create(jQuery('#modal'));
 
 modal.setTitle('Login');
 modal.setBody('<b>Login Form</b>');
@@ -55,7 +60,7 @@ modal.show();
 ## Options
 
 ```js
-const modal = ModalHelper.create($('#modal'));
+const modal = ModalHelper.create(jQuery('#modal'));
 
 modal.setTitle('Login');
 modal.setBody('<b>Login Form</b>');
@@ -76,7 +81,7 @@ modal.show();
 **ModalHelper** makes it easier to work with **BS** event system too
 
 ```js
-const modal = ModalHelper.create($('#modal'));
+const modal = ModalHelper.create(jQuery('#modal'));
 
 modal.getEvent().onShow(function () {
     console.log('Modal is showing...');
@@ -103,7 +108,7 @@ Both of the methods above accept second parameter **fireOnce**
 that indicated this event shall fire once, this parameter has **false** as default.
 
 ```js
-const modal = ModalHelper.create($('#modal'));
+const modal = ModalHelper.create(jQuery('#modal'));
 const listener = function () {
     console.log('Modal has shown, and this message won\'t be showing again.');
 };
@@ -116,7 +121,7 @@ modal.show();
 ## Miscellaneous
 
 ```js
-const modal = ModalHelper.create($('#modal'));
+const modal = ModalHelper.create(jQuery('#modal'));
 
 modal.setScrollable(true); // Make the modal scrollable
 modal.setVerticallyCentered(true); // Make the modal vertically centered
