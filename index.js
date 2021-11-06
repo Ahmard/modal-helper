@@ -1,7 +1,8 @@
 module.exports = (function () {
     function ModalHelperEvent(_$modal) {
-        this.on = (type, listener) => _$modal.on(type, listener);
-        this.once = (type, listener) => _$modal.once(type, listener);
+        this.on = (eventName, listener) => _$modal.on(eventName, listener);
+        this.off = (eventName) => _$modal.off(eventName);
+        this.once = (eventName, listener) => _$modal.once(eventName, listener);
 
         this.onShow = function (listener, fireOnce = false) {
             if (fireOnce) this.once('show.bs.modal', listener);
@@ -42,6 +43,7 @@ module.exports = (function () {
         };
 
         this.getEvent = () => _event;
+        this.handleUpdate = () => _$modal.modal('handleUpdate');
 
         this.getHeaderElement = function () {
             if (!$headerElement) {
@@ -157,10 +159,6 @@ module.exports = (function () {
                 });
             }
 
-            return this;
-        };
-
-        this.x = function (html) {
             return this;
         };
 
