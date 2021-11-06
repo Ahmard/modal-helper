@@ -3,7 +3,7 @@
         "jquery": "^3.6.0"
     },
     "name": "@ahmard/modal-helper",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "Bootstrap 5 modal UI helper",
     "main": "index.js",
     "devDependencies": {},

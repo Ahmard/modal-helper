@@ -2,7 +2,8 @@ module.exports = (function () {
     function ModalHelperEvent(_$modal) {
         this.on = (eventName, listener) => _$modal.on(eventName, listener);
         this.off = (eventName) => _$modal.off(eventName);
-        this.once = (eventName, listener) => _$modal.once(eventName, listener);
+        this.once = (eventName, listener) => _$modal.one(eventName, listener);
+        this.one = (eventName, listener) => this.once(eventName, listener);
 
         this.onShow = function (listener, fireOnce = false) {
             if (fireOnce) this.once('show.bs.modal', listener);
