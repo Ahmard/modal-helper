@@ -79,7 +79,7 @@ modal.show();
 ## Events
 
 **ModalHelper** makes it easier to work with **BS** event system too
-
+- Adding Listeners
 ```js
 const modal = ModalHelper.create(jQuery('#modal'));
 
@@ -116,6 +116,17 @@ const listener = function () {
 modal.getEvent().onShown(listener, false);
 
 modal.show();
+```
+
+- Removing Listeners
+```js
+const modal = ModalHelper.create(jQuery('#modal'));
+
+modal.getEvent().offShow(); // Remove "showing event"
+modal.getEvent().offShown(); // Remove "shown event"
+modal.getEvent().offHide(); // Remove "hide event"
+modal.getEvent().offHidden(); // Remove "hidden event"
+modal.getEvent().offHidePrevented(); // Remove "hide prevented event"
 ```
 
 ## Miscellaneous

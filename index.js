@@ -5,30 +5,66 @@ module.exports = (function () {
         this.once = (eventName, listener) => _$modal.one(eventName, listener);
         this.one = (eventName, listener) => this.once(eventName, listener);
 
+        /**
+         * This event will fire when modal is showing
+         *
+         * @param listener
+         * @param fireOnce
+         */
         this.onShow = function (listener, fireOnce = false) {
             if (fireOnce) this.once('show.bs.modal', listener);
             this.on('show.bs.modal', listener);
         };
 
+        /**
+         * This event will fire when modal is shown
+         *
+         * @param listener
+         * @param fireOnce
+         */
         this.onShown = function (listener, fireOnce = false) {
             if (fireOnce) this.once('shown.bs.modal', listener);
             this.on('shown.bs.modal', listener);
         };
 
+        /**
+         * This event will fire when modal is hiding
+         *
+         * @param listener
+         * @param fireOnce
+         */
         this.onHide = function (listener, fireOnce = false) {
             if (fireOnce) this.once('hide.bs.modal', listener);
             this.on('hide.bs.modal', listener);
         };
 
+        /**
+         * This event will fire when modal is hidden
+         *
+         * @param listener
+         * @param fireOnce
+         */
         this.onHidden = function (listener, fireOnce = false) {
             if (fireOnce) this.once('hidden.bs.modal', listener);
             this.on('hidden.bs.modal', listener);
         };
 
+        /**
+         * This event will fire when modal is hide prevented
+         *
+         * @param listener
+         * @param fireOnce
+         */
         this.onHidePrevented = function (listener, fireOnce = false) {
             if (fireOnce) this.once('hidePrevented.bs.modal', listener);
             this.on('hidePrevented.bs.modal', listener);
         };
+
+        this.offShow = () => this.off('show.bs.modal');
+        this.offShown = () => this.off('shown.bs.modal');
+        this.offHide = () => this.off('hide.bs.modal');
+        this.offHidden = () => this.off('hidden.bs.modal');
+        this.offHidePrevented = () => this.off('hidePrevented.bs.modal');
     }
 
     function ModalHelper(_$modal) {
